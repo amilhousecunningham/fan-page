@@ -131,11 +131,51 @@
         </table>
         <hr>
       </section>
-      <section id="survey">
-    <!--  - Your form should ask the user at least 4 different questions. For example: What is your favorite song? How many concerts have you been to? 
+      <!--  - Your form should ask the user at least 4 different questions. For example: What is your favorite song? How many concerts have you been to? 
     How many albums do you own from them? They can be whatever you would like. You need to use a different "type" of input for each question. You must use a 
     "select" list and a "datalist". Make sure that your form has a button to submit the users responses. -->
+      <section id="survey">
         <h3>Survey</h3>
+          <form>
+            <!-- Added "text" type question. -->
+            <article>
+              <label for="song"><strong>1. What is your favorite song?</strong></label>
+              <br>
+              <input type="text" name="song" id="song">
+           </article>
+            <!-- Added "number" type question. -->
+           <article>
+            <label for="concerts"><strong>2. How many concerts have you been to?</strong></label>
+            <br>
+            <input type="number" name="concerts" id="concerts" step="1">
+         </article>
+          <!-- Added "select" or dropdown type question. -->
+          <article>
+            <label for="favorite-place"><strong>3. Where is your favorite place to listen to music?</strong></label>
+            <br>
+            <select id="favorite-place" name="favorite-place">
+                <option value="car">Car</option>
+                <option value="bedroom">Bedroom</option>
+                <option value="outside">Outside</option>
+                <option value="kitchen">Kitchen</option>
+                <option value="shower">Shower</option>
+            </select>
+          </article>
+         <!-- Added "datalist" type question. -->
+          <article>
+            <label for="favorite-genre"><strong>4. What is your favorite genre of music?</strong></label>
+            <br>
+            <input type="text" list="genres" id="favorite-genre" name="favorite-genre">
+              <datalist id="genres">
+                <option value="Rock"></option>
+                <option value="Pop"></option>
+                <option value="Gospel"></option>
+                <option value="Rap"></option>
+                <option value="Classical"></option>
+                <option value="Other"></option>  
+              </datalist>
+          </article>
+        </form>
       <hr>
       </section>
       <section id="donate">
